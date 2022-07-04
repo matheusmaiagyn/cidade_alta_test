@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp1.XWindowTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="WindowTable" Height="450" Width="1000" ResizeMode="NoResize">
+    <Grid Background="#FFDFF4FF">
+        <DataGrid x:Name = "dataGrid" AlternatingRowBackground = "LightBlue" IsReadOnly="False"
+            AlternationCount = "2" AutoGenerateColumns = "False" Margin="0,0,0,126" Background="#FFDFF4FF" BorderBrush="Black" Grid.ColumnSpan="4">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="40" Header = "ID" Binding = "{Binding ID}" />
+                <DataGridTextColumn Width="100" Header = "Name" Binding = "{Binding Name}" />
+                <DataGridTextColumn Width="100" Header = "Description" Binding = "{Binding Description}"/>
+                <DataGridTextColumn Width="50" Header = "Penalty" Binding = "{Binding Penalty}"/>
+                <DataGridTextColumn Width="80" Header = "PrisonTime" Binding = "{Binding PrisonTime}"/>
+                <DataGridTextColumn Width="100" Header = "StatusID" Binding = "{Binding StatusID}"/>
+                <DataGridTextColumn Width="130" Header = "CreateDate" Binding = "{Binding CreateDate}"/>
+                <DataGridTextColumn Width="130" Header = "UpdateDate" Binding = "{Binding UpdateDate}"/>
+                <DataGridTextColumn Width="135" Header = "CreateUserID" Binding = "{Binding CreateUserID}"/>
+                <DataGridTextColumn Width="135" Header = "UpdateUserID" Binding = "{Binding UpdateUserID}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="BtnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="30,316,0,0" VerticalAlignment="Top" Width="70" Click="BtnAtualizar_Click" BorderBrush="#FFBFBFBF" Background="White"/>
+        <Button x:Name="BtnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="130,316,0,0" VerticalAlignment="Top" Width="70" Background="White" BorderBrush="#FFBFBFBF" Click="BtnSalvar_Click"/>
+        <Button x:Name="BtnNovo" Content="Novo" HorizontalAlignment="Left" Margin="230,316,0,0" VerticalAlignment="Top" Width="70" Background="White" BorderBrush="#FFBFBFBF" Click="BtnNovo_Click"/>
+        <Button x:Name="BtnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="330,316,0,0" VerticalAlignment="Top" Width="70" Background="White" BorderBrush="#FFBFBFBF" Click="BtnExcluir_Click"/>
+        <TextBox x:Name="TxtSearchID" HorizontalAlignment="Left" Margin="430,316,0,0" TextWrapping="Wrap" Text="Procurar por ID" VerticalAlignment="Top" Width="160" Height="20" TextChanged="TxtSearchID_TextChanged"/>
+        <Button x:Name="BtnVoltar" Content="Voltar" HorizontalAlignment="Right" Margin="0,316,130,0" VerticalAlignment="Top" Width="70" BorderBrush="#FFBFBFBF" Background="White" Click="BtnVoltar_Click"/>
+        <Button x:Name="BtnAvancar" Content="Avançar" HorizontalAlignment="Right" Margin="0,316,30,0" VerticalAlignment="Top" Width="70" BorderBrush="#FFBFBFBF" Background="White" Click="BtnAvancar_Click"/>
+        <Button x:Name="BtnLogout" Content="Logout" HorizontalAlignment="Center" Margin="0,387,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click" RenderTransformOrigin="-1.338,1.079" Background="White" BorderBrush="#FFBFBFBF"/>
+        <ComboBox x:Name="DropDown" HorizontalAlignment="Left" Margin="630,316,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5" Height="20" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.195"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.229"/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+
+    </Grid>
+</Window>
